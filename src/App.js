@@ -5,7 +5,15 @@ import StudentReadOut from './Pages/StudentReadOut'
 import AssignmentGrades from './Pages/AssignmentGrades';
 import StudentSurveys from './Pages/StudentSurveys'
 
-//import IMAGES from './assets/images/studentListBlue.PNG'
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
 
 
 
@@ -153,7 +161,24 @@ function App() {
     }
 
   return (
-        <div className="wrapper">
+    <View className="App">
+      <Card>
+        <Image src={logo} className="App-logo" alt="logo" />
+        <Heading level={1}>We now have Auth!</Heading>
+      </Card>
+      <Button onClick={signOut}>Sign Out</Button>
+    </View>        
+  );
+}
+
+
+export default withAuthenticator(App);
+
+//export default App;
+
+
+/*
+<div className="wrapper">
             <div className="sidebar">
             <img src="images/logo.PNG" alt="" width="17" height="17"/>
                 <ul>
@@ -206,10 +231,4 @@ function App() {
                 </div>
             </div>
         </div>
-  );
-}
-
-
-
-
-export default App;
+*/
