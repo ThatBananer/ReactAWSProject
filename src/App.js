@@ -161,24 +161,7 @@ function App() {
     }
 
   return (
-    <View className="App">
-      <Card>
-        <Image src={logo} className="App-logo" alt="logo" />
-        <Heading level={1}>We now have Auth!</Heading>
-      </Card>
-      <Button onClick={signOut}>Sign Out</Button>
-    </View>        
-  );
-}
-
-
-export default withAuthenticator(App);
-
-//export default App;
-
-
-/*
-<div className="wrapper">
+        <div className="wrapper">
             <div className="sidebar">
             <img src="images/logo.PNG" alt="" width="17" height="17"/>
                 <ul>
@@ -231,4 +214,10 @@ export default withAuthenticator(App);
                 </div>
             </div>
         </div>
-*/
+  );
+}
+
+
+
+
+export default App;
